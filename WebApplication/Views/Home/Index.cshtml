@@ -1,9 +1,100 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<style>
+   /*  body {
+        background: linear-gradient(135deg, #e3f2fd, #fce4ec);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    } */
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    //<p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-<h1>Hello World from Web application<h1/>
+    .profile-img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border: 5px solid #0d6efd;
+    }
+</style>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-sm-10 col-md-6 col-lg-4">
+            <div class="card shadow-lg text-center rounded-4">
+                <div class="card-body p-4">
+
+                    <!-- Profile Image -->
+                    <img src="@Url.Content("~/image/1000051771.jpg")"
+                         alt="User Image"
+                         class="rounded-circle profile-img mb-3">
+
+                    <!-- Name -->
+                    <h4 class="card-title fw-bold">Sonilal Chavhan</h4>
+                    <p class="text-muted mb-3">Software Developer</p>
+
+                    <!-- Profile Details -->
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item">
+                            <strong>Age:</strong> 28
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Gender:</strong> Male
+                        </li>
+                        <li class="list-group-item">
+                            <strong>City:</strong> Pune, India
+                        </li>
+                    </ul>
+
+                    <!-- Action Button -->
+                    <div class="mt-4">
+                        <button class="btn btn-primary w-100 rounded-pill">
+                            View Full Profile
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-sm-10 col-md-6 col-lg-4">
+            <div class="card shadow-lg text-center rounded-4">
+                <div class="card-body p-4">
+
+                    <!-- Profile Image -->
+                    <img src="@Url.Content("~/image/1000051771.jpg")"
+                         alt="User Image"
+                         class="rounded-circle profile-img mb-3">
+
+                    <!-- Name -->
+                    <h4 class="card-title fw-bold">Sonilal Chavhan</h4>
+                    <p class="text-muted mb-3">Software Developer</p>
+
+                    <!-- Profile Details -->
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item">
+                            <strong>Age:</strong> 28
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Gender:</strong> Male
+                        </li>
+                        <li class="list-group-item">
+                            <strong>City:</strong> Pune, India
+                        </li>
+                    </ul>
+
+                    <!-- Action Button -->
+                    <div class="mt-4">
+                        <button class="btn btn-primary w-100 rounded-pill">
+                            View Full Profile
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
