@@ -18,6 +18,18 @@ namespace WebApplication.Controllers
             return View();
         }
 
+        public IActionResult SonilalChavhan()
+        {
+            return View();
+        }
+
+        public IActionResult AkankshaSamdole()
+        {
+
+            return View();
+        }
+
+
         public IActionResult Privacy()
         {
             return View();

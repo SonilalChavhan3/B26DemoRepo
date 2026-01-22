@@ -1,0 +1,135 @@
+@{
+    ViewData["Title"] = "Portfolio";
+    Layout = "_Layout"; 
+}
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="utf-8" />
+    <title>Akanksha A.Samdole | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#3b82f6",
+                        lightbg: "#f8fafc",
+                        darkbg: "#0f172a"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-lightbg dark:bg-darkbg text-slate-800 dark:text-slate-200">
+
+<main class="max-w-3xl mx-auto px-5 py-24 space-y-8">
+
+    <!-- HEADER -->
+    <section class="text-center bg-white dark:bg-slate-900 p-6 rounded-2xl border">
+        <h1 class="text-2xl font-bold">Akanksha A. Samdole</h1>
+        <p class="text-primary font-medium mt-1">
+            Software Developer (.NET Core / Angular)
+        </p>
+        <p class="text-sm text-slate-500 mt-2">
+            📧 samdoleakanksha01@gmail.com | 📞 +91 8888588236
+        </p>
+    </section>
+
+    <!-- SUMMARY -->
+    <section class="bg-white dark:bg-slate-900 p-6 rounded-2xl border">
+        <h2 class="font-bold text-lg text-primary mb-3">Professional Summary</h2>
+        <ul class="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 space-y-1">
+            <li>Fresher Fullstack Developer skilled in .NET Core and Angular development</li>
+            <li>ASP.NET Core MVC, Web API, Angular</li>
+            <li>Hands-on with SQL Server</li>
+            <li>Agile / SCRUM experience</li>
+            <li>Git,VS Code, Visual Studio  Swagger, Postman</li>
+        </ul>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="bg-white dark:bg-slate-900 p-6 rounded-2xl border">
+        <h2 class="font-bold text-lg text-primary mb-3">Technical Skills</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+            <p><strong>Languages:</strong> C#</p>
+            <p><strong>Web:</strong> ASP.NET Core MVC, Web API, LINQ, EF</p>
+            <p><strong>Frontend:</strong> Angular</p>
+            <p><strong>Database:</strong> SQL Server</p>
+            <p><strong>DevOps:</strong> Git, GitHub Actions, Jenkins, SonarQube, Nexus</p>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="bg-white dark:bg-slate-900 p-6 rounded-2xl border">
+        <h2 class="font-bold text-lg text-primary mb-3">Experience</h2>
+        <p class="font-semibold">Software Engineer</p>
+        <p class="text-sm text-slate-500">
+            Vhaash Technologies Pvt. Ltd, Pune<br />
+            JUL 2025 – Present
+        </p>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="bg-white dark:bg-slate-900 p-6 rounded-2xl border">
+        <h2 class="font-bold text-lg text-primary mb-4">Projects</h2>
+
+        <h3 class="font-semibold">Yacht Booking Portal (Web & Mobile)</h3>
+        <ul class="list-disc list-inside text-sm text-slate-600 dark:text-slate-400 mb-4">
+            <li>User, Admin, Boat Owner roles</li>
+            <li>Stripe payment & refund system</li>
+            <li>Angular, C#</li>
+        </ul>
+    </section>
+
+    <!-- ROLES -->
+    <section class="bg-white dark:bg-slate-900 p-6 rounded-2xl border">
+        <h2 class="font-bold text-lg text-primary mb-3">Roles & Responsibilities</h2>
+        <ul class="list-disc list-inside text-sm text-slate-600 dark:text-slate-400">
+            <li>Daily scrum meetings</li>
+            <li>Story analysis & estimation</li>
+            <li>Code review & peer review</li>
+            <li>Database design & optimization</li>
+            <li>Git branch management</li>
+        </ul>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="bg-white dark:bg-slate-900 p-6 rounded-2xl border">
+        <h2 class="font-bold text-lg text-primary mb-2">Education</h2>
+        <p class="text-sm">
+            B.E. Mechatronics Engineering – <strong>8 CGPA</strong><br />
+            DBATU University (2025)
+        </p>
+    </section>
+
+    <!-- PERSONAL INFO -->
+    <section class="bg-white dark:bg-slate-900 p-6 rounded-2xl border">
+        <h2 class="font-bold text-lg text-primary mb-3">Personal Information</h2>
+        <div class="grid grid-cols-2 gap-3 text-sm">
+            <p><strong>DOB:</strong> 14 JULY 2003</p>
+            <p><strong>Gender:</strong> Female</p>
+            <p><strong>Marital Status:</strong> Unmarried</p>
+            <p><strong>Languages:</strong> English, Hindi, Marathi</p>
+            <p><strong>Nationality:</strong> Indian</p>
+            <p class="col-span-2"><strong>Address:</strong> Kolhapur, Maharashtra, India</p>
+        </div>
+    </section>
+
+</main>
+
+</body>
+</html>
