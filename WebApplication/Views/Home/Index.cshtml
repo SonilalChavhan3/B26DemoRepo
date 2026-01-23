@@ -1,431 +1,205 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+
 <style>
-   /*  body {
-        background: linear-gradient(135deg, #e3f2fd, #fce4ec);
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    } */
+    body {
+        background-color: #f5f7fb;
+    }
 
     .profile-img {
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
         object-fit: cover;
-        border: 5px solid #0d6efd;
+        border: 4px solid #0d6efd;
     }
+
+    .profile-card {
+        transition: transform 0.3s ease;
+    }
+
+        .profile-card:hover {
+            transform: translateY(-6px);
+        }
 </style>
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-sm-10 col-md-6 col-lg-4">
-            <div class="card shadow-lg text-center rounded-4">
-                <div class="card-body p-4">
+<div class="container py-4">
+    <div class="row g-4">
 
-                    <!-- Profile Image -->
-                    <img src="@Url.Content("~/image/1000051771.jpg")"
-                         alt="User Image"
-                         class="rounded-circle profile-img mb-3">
-
-                    <!-- Name -->
-                    <h4 class="card-title fw-bold">Sonilal Chavhan</h4>
-                    <p class="text-muted mb-3">Software Developer</p>
-
-                    <!-- Profile Details -->
-                    <ul class="list-group list-group-flush text-start">
-                        <li class="list-group-item">
-                            <strong>Age:</strong> 28
-                        </li>
-                        <li class="list-group-item">
-                            <strong>Gender:</strong> Male
-                        </li>
-                        <li class="list-group-item">
-                            <strong>City:</strong> Pune, India
-                        </li>
+        <!-- Sonilal -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card profile-card shadow text-center h-100 rounded-4">
+                <div class="card-body">
+                    <img src="~/image/sonu.jpeg" class="rounded-circle profile-img mb-3" />
+                    <h5 class="fw-bold">Sonilal Chavhan</h5>
+                    <p class="text-muted">Sinior Software Engineer</p>
+                    <ul class="list-group list-group-flush small text-start">
+                        <li class="list-group-item"><strong>Age:</strong> 30</li>
+                        <li class="list-group-item"><strong>Gender:</strong> Male</li>
+                        <li class="list-group-item"><strong>City:</strong> Pune</li>
                     </ul>
-
-                    <!-- Action Button -->
-                    <div class="mt-4">
-                        <a asp-controller="Home" asp-action="SonilalChavhan" class="btn btn-primary w-100 rounded-pill">
-                            View Full Profile
-                        </a>
-                    </div>
-
+                    <a asp-controller="Home" asp-action="SonilalChavhan"
+                       class="btn btn-primary btn-sm w-100 rounded-pill mt-3">View Profile</a>
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
-
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-sm-10 col-md-6 col-lg-4">
-            <div class="card shadow-lg text-center rounded-4">
-                <div class="card-body p-4">
-
-                    <!-- Profile Image -->
-                    <img src="@Url.Content("~/image/1000051771.jpg")"
-                         alt="User Image"
-                         class="rounded-circle profile-img mb-3">
-
-                    <!-- Name -->
-                    <h4 class="card-title fw-bold">Pratik Nimabalkar</h4>
-                    <p class="text-muted mb-3">Software Developer</p>
-
-                    <!-- Profile Details -->
-                    <ul class="list-group list-group-flush text-start">
-                        <li class="list-group-item">
-                            <strong>Age:</strong> 25
-                        </li>
-                        <li class="list-group-item">
-                            <strong>Gender:</strong> Male
-                        </li>
-                        <li class="list-group-item">
-                            <strong>City:</strong> Pune, India
-                        </li>
+        <!-- Pratik -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card profile-card shadow text-center h-100 rounded-4">
+                <div class="card-body">
+                    <img src="~/image/pratik.jfif" class="rounded-circle profile-img mb-3" />
+                    <h5 class="fw-bold">Pratik Nimabalkar</h5>
+                    <p class="text-muted">Software Developer</p>
+                    <ul class="list-group list-group-flush small text-start">
+                        <li class="list-group-item"><strong>Age:</strong> 25</li>
+                        <li class="list-group-item"><strong>Gender:</strong> Male</li>
+                        <li class="list-group-item"><strong>City:</strong> Pune</li>
                     </ul>
-
-                    <!-- Action Button -->
-                    <div class="mt-4">
-                        <button class="btn btn-primary w-100 rounded-pill">
-                            View Full Profile
-                        </button>
-                    </div>
-
+                    <button class="btn btn-primary btn-sm w-100 rounded-pill mt-3">View Profile</button>
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-sm-10 col-md-6 col-lg-4">
-            <div class="card shadow-lg text-center rounded-4">
-                <div class="card-body p-4">
-
-                    <!-- Profile Image -->
-                    <img src="@Url.Content("~/image/Akanksha-img.jpeg")"
-                         alt="User Image"
-                         class="rounded-circle profile-img mb-3">
-
-                    <!-- Name -->
-                    <h4 class="card-title fw-bold">Akanksha Samdole</h4>
-                    <p class="text-muted mb-3">Software Developer</p>
-
-                    <!-- Profile Details -->
-                    <ul class="list-group list-group-flush text-start">
-                        <li class="list-group-item">
-                            <strong>Age:</strong> 23
-                        </li>
-                        <li class="list-group-item">
-                            <strong>Gender:</strong> Female
-                        </li>
-                        <li class="list-group-item">
-                            <strong>City:</strong> Pune, India
-                        </li>
+        <!-- Akanksha -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card profile-card shadow text-center h-100 rounded-4">
+                <div class="card-body">
+                    <img src="~/image/Akanksha-img.jpeg" class="rounded-circle profile-img mb-3" />
+                    <h5 class="fw-bold">Akanksha Samdole</h5>
+                    <p class="text-muted">Software Developer</p>
+                    <ul class="list-group list-group-flush small text-start">
+                        <li class="list-group-item"><strong>Age:</strong> 23</li>
+                        <li class="list-group-item"><strong>Gender:</strong> Female</li>
+                        <li class="list-group-item"><strong>City:</strong> Pune</li>
                     </ul>
-
-                    <!-- Action Button -->
-                    <div class="mt-4">
-                        <button class="btn btn-primary w-100 rounded-pill">
-                            View Full Profile
-                        </button>
-                    </div>
-
+                    <button class="btn btn-primary btn-sm w-100 rounded-pill mt-3">View Profile</button>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-sm-10 col-md-6 col-lg-4">
-            <div class="card shadow-lg text-center rounded-4">
-                <div class="card-body p-4">
 
-                    <!-- Profile Image -->
-                    <img src="@Url.Content("~/image/ankita_img.jpeg")"
-                         alt="User Image"
-                         class="rounded-circle profile-img mb-3">
-
-                    <!-- Name -->
-                    <h4 class="card-title fw-bold">Ankita Khade</h4>
-                    <p class="text-muted mb-3">Software Developer</p>
-
-                    <!-- Profile Details -->
-                    <ul class="list-group list-group-flush text-start">
-                        <li class="list-group-item">
-                            <strong>Age:</strong> 24
-                        </li>
-                        <li class="list-group-item">
-                            <strong>Gender:</strong> Female
-                        </li>
-                        <li class="list-group-item">
-                            <strong>City:</strong> Pune, India
-                        </li>
+        <!-- Ankita -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card profile-card shadow text-center h-100 rounded-4">
+                <div class="card-body">
+                    <img src="~/image/ankita_img.jpeg" class="rounded-circle profile-img mb-3" />
+                    <h5 class="fw-bold">Ankita Khade</h5>
+                    <p class="text-muted">Software Developer</p>
+                    <ul class="list-group list-group-flush small text-start">
+                        <li class="list-group-item"><strong>Age:</strong> 24</li>
+                        <li class="list-group-item"><strong>Gender:</strong> Female</li>
+                        <li class="list-group-item"><strong>City:</strong> Pune</li>
                     </ul>
-
-                    <!-- Action Button -->
-                    <div class="mt-4">
-                        <button class="btn btn-primary w-100 rounded-pill">
-                            View Full Profile
-                        </button>
-                    </div>
-
+                    <button class="btn btn-primary btn-sm w-100 rounded-pill mt-3">View Profile</button>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-sm-10 col-md-6 col-lg-4">
-            <div class="card shadow-lg text-center rounded-4">
-                <div class="card-body p-4">
 
-                    <!-- Profile Image -->
-                    <img src="@Url.Content("~/image/Sagar.jpg")"
-                         alt="User Image"
-                         class="rounded-circle profile-img mb-3">
-
-                    <!-- Name -->
-                    <h4 class="card-title fw-bold">Sagar Akuch</h4>
-                    <p class="text-muted mb-3">Software Developer</p>
-
-                    <!-- Profile Details -->
-                    <ul class="list-group list-group-flush text-start">
-                        <li class="list-group-item">
-                            <strong>Age:</strong> 28
-                        </li>
-                        <li class="list-group-item">
-                            <strong>Gender:</strong> Male
-                        </li>
-                        <li class="list-group-item">
-                            <strong>City:</strong> Pune, India
-                        </li>
+        <!-- Sagar -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card profile-card shadow text-center h-100 rounded-4">
+                <div class="card-body">
+                    <img src="~/image/Sagar.jpg" class="rounded-circle profile-img mb-3" />
+                    <h5 class="fw-bold">Sagar Akuch</h5>
+                    <p class="text-muted">Software Developer</p>
+                    <ul class="list-group list-group-flush small text-start">
+                        <li class="list-group-item"><strong>Age:</strong> 28</li>
+                        <li class="list-group-item"><strong>Gender:</strong> Male</li>
+                        <li class="list-group-item"><strong>City:</strong> Pune</li>
                     </ul>
-
-                    <!-- Action Button -->
-                    <div class="mt-4">
-                        <button class="btn btn-primary w-100 rounded-pill">
-                            View Full Profile
-                        </button>
-                    </div>
-
+                    <button class="btn btn-primary btn-sm w-100 rounded-pill mt-3">View Profile</button>
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-sm-10 col-md-6 col-lg-4">
-            <div class="card shadow-lg text-center rounded-4">
-                <div class="card-body p-4">
-
-                    <!-- Profile Image -->
-                    <img src="@Url.Content("~/image/pruthwi.jpg")"
-                         alt="User Image"
-                         class="rounded-circle profile-img mb-3">
-
-                    <!-- Name -->
-                    <h4 class="card-title fw-bold">Pruthwi Garale</h4>
-                    <p class="text-muted mb-3">Software Developer</p>
-
-                    <!-- Profile Details -->
-                    <ul class="list-group list-group-flush text-start">
-                        <li class="list-group-item">
-                            <strong>Age:</strong> 24
-                        </li>
-                        <li class="list-group-item">
-                            <strong>Gender:</strong> Female
-                        </li>
-                        <li class="list-group-item">
-                            <strong>City:</strong> Pune, India
-                        </li>
+        <!-- Pruthwi -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card profile-card shadow text-center h-100 rounded-4">
+                <div class="card-body">
+                    <img src="~/image/pruthwi.jpg" class="rounded-circle profile-img mb-3" />
+                    <h5 class="fw-bold">Pruthwi Garale</h5>
+                    <p class="text-muted">Software Developer</p>
+                    <ul class="list-group list-group-flush small text-start">
+                        <li class="list-group-item"><strong>Age:</strong> 24</li>
+                        <li class="list-group-item"><strong>Gender:</strong> Female</li>
+                        <li class="list-group-item"><strong>City:</strong> Pune</li>
                     </ul>
-
-                    <!-- Action Button -->
-                    <div class="mt-4">
-                        <a asp-controller="Home"
-                           asp-action="PruthwiGarale"
-                           class="btn btn-primary w-100 rounded-pill">
-                            View Full Profile
-                        </a>
-                    </div>
-
-
+                    <a asp-controller="Home" asp-action="PruthwiGarale"
+                       class="btn btn-primary btn-sm w-100 rounded-pill mt-3">View Profile</a>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-sm-10 col-md-6 col-lg-4">
-            <div class="card shadow-lg text-center rounded-4">
-                <div class="card-body p-4">
 
-                    <!-- Profile Image -->
-                    <img src="@Url.Content("~/image/Bharti.jpg")"
-                         alt="User Image"
-                         class="rounded-circle profile-img mb-3">
-
-                    <!-- Name -->
-                    <h4 class="card-title fw-bold">Bharti Pawar</h4>
-                    <p class="text-muted mb-3">Software Developer</p>
-
-                    <!-- Profile Details -->
-                    <ul class="list-group list-group-flush text-start">
-                        <li class="list-group-item">
-                            <strong>Age:</strong> 25
-                        </li>
-                        <li class="list-group-item">
-                            <strong>Gender:</strong> Female
-                        </li>
-                        <li class="list-group-item">
-                            <strong>City:</strong> Pune, India
-                        </li>
+        <!-- Bharti -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card profile-card shadow text-center h-100 rounded-4">
+                <div class="card-body">
+                    <img src="~/image/Bharti.jpg" class="rounded-circle profile-img mb-3" />
+                    <h5 class="fw-bold">Bharti Pawar</h5>
+                    <p class="text-muted">Software Developer</p>
+                    <ul class="list-group list-group-flush small text-start">
+                        <li class="list-group-item"><strong>Age:</strong> 25</li>
+                        <li class="list-group-item"><strong>Gender:</strong> Female</li>
+                        <li class="list-group-item"><strong>City:</strong> Pune</li>
                     </ul>
-
-                    <!-- Action Button -->
-                    <div class="mt-4">
-                        <button class="btn btn-primary w-100 rounded-pill">
-                            View Full Profile
-                        </button>
-                    </div>
-
+                    <a asp-controller="Home" asp-action="BhartiPawar"
+                       class="btn btn-primary btn-sm w-100 rounded-pill mt-3">View Profile</a>
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-sm-10 col-md-6 col-lg-4">
-            <div class="card shadow-lg text-center rounded-4">
-                <div class="card-body p-4">
-
-                    <!-- Profile Image -->
-                    <img src="@Url.Content("~/image/Arpithaphoto.jpeg")"
-                         alt="User Image"
-                         class="rounded-circle profile-img mb-3">
-
-                    <!-- Name -->
-                  <h4 class="card-title fw-bold">Arpitha Kudave</h4>
-                    <p class="text-muted mb-3">Software Developer</p>
-
-                    <!-- Profile Details -->
-                    <ul class="list-group list-group-flush text-start">
-                        <li class="list-group-item">
-                            <strong>Age:</strong> 25
-                        </li>
-                        <li class="list-group-item">
-                            <strong>Gender:</strong> Female
-                        </li>
-                        <li class="list-group-item">
-                            <strong>City:</strong> Adilabad, India
-                        </li>
+        <!-- Arpitha -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card profile-card shadow text-center h-100 rounded-4">
+                <div class="card-body">
+                    <img src="~/image/Arpithaphoto.jpeg" class="rounded-circle profile-img mb-3" />
+                    <h5 class="fw-bold">Arpitha Kudave</h5>
+                    <p class="text-muted">Software Developer</p>
+                    <ul class="list-group list-group-flush small text-start">
+                        <li class="list-group-item"><strong>Age:</strong> 25</li>
+                        <li class="list-group-item"><strong>Gender:</strong> Female</li>
+                        <li class="list-group-item"><strong>City:</strong> Adilabad</li>
                     </ul>
-
-                    <!-- Action Button -->
-                    <div class="mt-4">
-                        <a asp-controller="Home" asp-action="ArpithaKudave" class="btn btn-primary w-100 rounded-pill">
-                            View Full Profile
-                        </a>
-                    </div>
-
+                    <a asp-controller="Home" asp-action="ArpithaKudave"
+                       class="btn btn-primary btn-sm w-100 rounded-pill mt-3">View Profile</a>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-  
-  <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-sm-10 col-md-6 col-lg-4">
-            <div class="card shadow-lg text-center rounded-4">
-                <div class="card-body p-4">
 
-                    <!-- Profile Image -->
-                    <img src="@Url.Content("~/image/sofiya image.jpg")"
-                         alt="User Image"
-                         class="rounded-circle profile-img mb-3">
-
-                    <!-- Name -->
-                    <h4 class="card-title fw-bold">Sofiya shaikh</h4>
-                    <p class="text-muted mb-3">Software Developer</p>
-
-                    <!-- Profile Details -->
-                    <ul class="list-group list-group-flush text-start">
-                        <li class="list-group-item">
-                            <strong>Age:</strong> 22
-                        </li>
-                        <li class="list-group-item">
-                            <strong>Gender:</strong> Female
-                        </li>
-                        <li class="list-group-item">
-                            <strong>City:</strong> Kolhapur, India
-                        </li>
+        <!-- Sofiya -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card profile-card shadow text-center h-100 rounded-4">
+                <div class="card-body">
+                    <img src="~/image/sofiya image.jpg" class="rounded-circle profile-img mb-3" />
+                    <h5 class="fw-bold">Sofiya Shaikh</h5>
+                    <p class="text-muted">Software Developer</p>
+                    <ul class="list-group list-group-flush small text-start">
+                        <li class="list-group-item"><strong>Age:</strong> 22</li>
+                        <li class="list-group-item"><strong>Gender:</strong> Female</li>
+                        <li class="list-group-item"><strong>City:</strong> Kolhapur</li>
                     </ul>
-
-                    <!-- Action Button -->
-                    <div class="mt-4">
-                        <a  class="btn btn-primary w-100 rounded-pill">
-                            View Full Profile
-                        </a>
-                    </div>
-
+                    <button class="btn btn-primary btn-sm w-100 rounded-pill mt-3">View Profile</button>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-                                                                                                                       
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-sm-10 col-md-6 col-lg-4">
-            <div class="card shadow-lg text-center rounded-4">
-                <div class="card-body p-4">
 
-                    <!-- Profile Image -->
-                    <img src="~/image/kiran-image.jpg"
-                         alt="User Image"
-                         class="rounded-circle profile-img mb-3" />
-
-
-                    <!-- Name -->
-                    <h4 class="card-title fw-bold">Kiran More</h4>
-                    <p class="text-muted mb-3">Software Developer</p>
-
-                    <!-- Profile Details -->
-                    <ul class="list-group list-group-flush text-start">
-                        <li class="list-group-item">
-                            <strong>Age:</strong> 22
-                        </li>
-                        <li class="list-group-item">
-                            <strong>Gender:</strong> Male
-                        </li>
-                        <li class="list-group-item">
-                            <strong>City:</strong> Sangli, India
-                        </li>
+        <!-- Kiran -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card profile-card shadow text-center h-100 rounded-4">
+                <div class="card-body">
+                    <img src="~/image/kiran-image.jpg" class="rounded-circle profile-img mb-3" />
+                    <h5 class="fw-bold">Kiran More</h5>
+                    <p class="text-muted">Software Developer</p>
+                    <ul class="list-group list-group-flush small text-start">
+                        <li class="list-group-item"><strong>Age:</strong> 22</li>
+                        <li class="list-group-item"><strong>Gender:</strong> Male</li>
+                        <li class="list-group-item"><strong>City:</strong> Sangli</li>
                     </ul>
-
-                    <!-- Action Button -->
-                    <div class="mt-4">
-                        <a asp-controller="Details" asp-action="Index" class="btn btn-primary w-100 rounded-pill">
-                            View Full Profile
-                        </a>
-                    </div>
-
+                    <a asp-controller="Details" asp-action="Index"
+                       class="btn btn-primary btn-sm w-100 rounded-pill mt-3">View Profile</a>
                 </div>
             </div>
         </div>
+
     </div>
 </div>
