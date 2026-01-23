@@ -18,6 +18,11 @@ namespace WebApplication.Controllers
             return View();
         }
 
+        public IActionResult BhartiPawar()
+        {
+            return View();
+        }
+
         public IActionResult SonilalChavhan()
         {
             return View();
