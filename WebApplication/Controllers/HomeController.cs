@@ -36,6 +36,11 @@ namespace WebApplication.Controllers
         {
             return View();
         }
+        public IActionResult SofiyaShaikh()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
