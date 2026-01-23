@@ -18,6 +18,10 @@ namespace WebApplication.Controllers
             return View();
         }
 
+        public IActionResult BhartiPawar()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
