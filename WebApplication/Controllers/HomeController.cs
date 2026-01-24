@@ -23,6 +23,14 @@ namespace WebApplication.Controllers
             return View();
         }
 
+        public IActionResult ArpithaKudave()
+        {
+          return view();
+        }
+        public IActionResult PruthwiGarale()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
