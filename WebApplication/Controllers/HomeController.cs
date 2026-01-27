@@ -27,7 +27,13 @@ namespace WebApplication.Controllers
         {
           return view();
         }
+         
+        
         public IActionResult PruthwiGarale()
+        {
+            return View();
+        }
+        public IActionResult ShrutiGaikwad()
         {
             return View();
         }
