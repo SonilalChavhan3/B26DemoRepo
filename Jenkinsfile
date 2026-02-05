@@ -3,7 +3,7 @@
 		environment {
         DOTNET_ROOT = "C:\\Program Files\\dotnet"
         SOLUTION_NAME = "B26DemoRepo.sln"
-        PROJECT_PATH = "WebApplication\WebApplication.csproj"
+        PROJECT_PATH = "WebApplication\\WebApplication.csproj"
         NEXUS_URL = "http://localhost:8081/repository/Batch25/"
         PS_SCRIPT_PATH = "C:\\Tools\\commonbuild\\NugetPackagePublish.ps1"
         Project_Name = "WebApplication"
