@@ -46,6 +46,43 @@ stages {
 			            }
 			        }
 
+stage('SonarQube Analysis and Testing..') {
+    steps {
+        script {
+            def scannerHome = tool 'SonarScanner for MSBuild'
+
+            withSonarQubeEnv('MySonarQube') {
+                // Step 1: Sonar Begin
+                bat """
+                \"${scannerHome}\\SonarScanner.MSBuild.exe\" begin ^
+                    /k:\"${env.Project_Name}_${env.BRANCH_NAME}\" ^
+                    /n:\"${env.Project_Name} (${env.BRANCH_NAME})\" ^
+                    /v:\"${env.BUILD_NUMBER}\" ^
+                    /d:sonar.cs.opencover.reportsPaths=\"**/coverage.opencover.xml\" ^
+                    /d:sonar.coverage.exclusions=\"**/*Migrations*/**\"
+                """
+
+                // Step 2: Build
+                bat "dotnet build ${env.SOLUTION_NAME} -c Release"
+
+				echo 'Testting...'
+                // Step 3: Test with Coverage
+               bat """
+    dotnet test ${env.SOLUTION_NAME} ^
+        --settings \"${WORKSPACE}\\coverlet.runsettings\" ^
+        --logger \"trx;LogFileName=TestResults.trx\" ^
+        /p:CollectCoverage=true ^
+        /p:CoverletOutput=\"${WORKSPACE}\\TestResults\\coverage.opencover.xml\" ^
+        /p:CoverletOutputFormat=opencover
+    """
+
+                // Step 4: Sonar End
+                bat "\"${scannerHome}\\SonarScanner.MSBuild.exe\" end"
+            }
+        }
+    }
+}
+	
 stage('Test') {
             steps {
                 echo 'Testing...'
