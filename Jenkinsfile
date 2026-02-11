@@ -4,7 +4,7 @@
         DOTNET_ROOT = "C:\\Program Files\\dotnet"
         SOLUTION_NAME = "B26DemoRepo.sln"
         PROJECT_PATH = "WebApplication\\WebApplication.csproj"
-        NEXUS_URL = "http://localhost:8081/repository/Batch25/"
+        NEXUS_URL = "http://localhost:8081/repository/B26DemoNexus/"
         PS_SCRIPT_PATH = "C:\\Tools\\commonbuild\\NugetPackagePublish.ps1"
         Project_Name = "WebApplication"
         
@@ -29,22 +29,6 @@ stages {
                 bat "dotnet build ${env.PROJECT_PATH} -c Release --no-restore"
             }
         }
-
-	  stage('SonarQube Analysis') {
-			            steps {
-			                script {
-			                    // Assign tool inside script block
-			                    def scannerHome = tool 'SonarScanner for MSBuild'
-			
-			                    // Use withSonarQubeEnv inside script block
-			                    withSonarQubeEnv('MySonarQube') {
-			                        bat "\"${scannerHome}\\SonarScanner.MSBuild.exe\" begin /k:\"B26Demo\""
-			                        bat "dotnet build"
-			                        bat "\"${scannerHome}\\SonarScanner.MSBuild.exe\" end"
-			                    }
-			                }
-			            }
-			        }
 
 stage('SonarQube Analysis and Testing..') {
     steps {
@@ -82,10 +66,20 @@ stage('SonarQube Analysis and Testing..') {
         }
     }
 }
-	
-stage('Test') {
+	 stage('Create and Push NuGet Package') {
             steps {
-                echo 'Testing...'
+                script {
+                    powershell """
+                        powershell.exe -NonInteractive -ExecutionPolicy Bypass `
+                        -File \"${env.PS_SCRIPT_PATH}\" `
+                        -ProjectName \"${env.Project_Name}\" `
+						-ProjectPath \"${env.PROJECT_PATH}\" `
+                        -BranchName \"${env.BRANCH_NAME}\" `
+                        -BuildNumber \"${env.BUILD_NUMBER}\" `
+                        -NexusUrl \"${env.NEXUS_URL}\" 
+                    """
+                    
+                }
             }
         }
 
