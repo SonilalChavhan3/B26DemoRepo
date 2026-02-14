@@ -28,14 +28,11 @@ namespace WebApplication.Controllers
             return View();
         }
 
-        public IActionResult ArpithaKudave()
-        {
-          return View();
-        }
-        public IActionResult PruthwiGarale()
+        public IActionResult AkankshaSamdole()
         {
             return View();
         }
+
         public IActionResult Privacy()
         {
             return View();
